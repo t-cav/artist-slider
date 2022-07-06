@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://kit.fontawesome.com/a71707a89a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css"/>
+
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: rgb(0, 0, 0);
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        color: #000;
+        font-size: 1.5rem;
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        position: relative;
+        height: 85%;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      p {
+        font-family: Arial, Helvetica, sans-serif
+        font-size: 2em;
+        font-weight: 500;
+        color: white;
+        text-align: center;
+      }
+
+      .swiper {
+        width: 240px;
+        height: 320px;
+        background-color: black;
+      }
+
+      .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 18px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #fff;
+      }
+
+      #spin {
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #spin:after {
+       content:"";
+       animation: spin 5s linear infinite;
+      }
+        @keyframes spin {
+        0% { content:"Swipe through artists."; }
+        100% { content:"Click to learn more."; }
+        }
+
+        .capIcon {
+            display: flex;
+            border-radius: 10px;
+            margin-bottom: 50px;
+        }
+      
+
+    </style>
+  </head>
+
+  <body>
+    <!-- Swiper -->
+
+    <div class="swiper mySwiper">
+      <center><img src="orangecap_icon.jpg" class="capIcon" width="15%"></center>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <a>
+                <img src="rajule.png" width="70%">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <img src="brandon.png" width="70%">
+        </div>
+        <div class="swiper-slide">
+            <img src="quantum.png" width="70%">
+        </div>
+        <div class="swiper-slide">
+            <img src="akin.png" width="70%">
+        </div>
+        <div class="swiper-slide">
+            <img src="leo.png" width="70%">
+        </div>
+        <div class="swiper-slide">
+            <a href="https://youtube.com/">
+                <img src="lucas.png" width="70%">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="https://google.com/">
+                <img src="pat.png" width="70%">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <img src="steve.png" width="70%">
+        </div>
+        <div class="swiper-slide">
+            <img src="jamie.png" width="70%">
+        </div>
+        <div class="swiper-slide">
+            <img src="goff.png" width="70%">
+        </div>
+        <div class="swiper-slide">
+            <img src="jordan.png" width="70%">
+        </div>
+        <div class="swiper-slide">
+          <img src="leo.png" width="70%">
+      </div>
+      <div class="swiper-slide">
+        <img src="mikey.png" width="70%">
+      </div>
+      </div>
+      <p><span id="spin"></span></p>
+
+
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./app.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "cards",
+        grabCursor: true,
+        loop: true,
+        keyboard: true,
+        initialSlide: 5,
+      });
+
+      
+    </script>
+  </body>
+</html>
