@@ -5,21 +5,14 @@
     <title>Playground</title>
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
-    />
-    <!-- Link Swiper's CSS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+    
+      <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <script src="https://kit.fontawesome.com/a71707a89a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css"/>
     <link rel="shortcut icon" type="image/png" href="favicon.png"/>
-
-
-
-
-
+  
     <!-- Demo styles -->
     <style>
       html,
@@ -36,6 +29,7 @@
         padding: 0;
         overflow-y: hidden;
         overflow-x: hidden;
+        justify-content: center;
       }
 
       body {
@@ -50,6 +44,7 @@
       body {
         position: relative;
         height: 85%;
+        justify-content: center;
       }
 
       body {
@@ -59,9 +54,9 @@
       }
 
       p {
-        font-size: 1.5em;
+        font-size: 1.0em;
         font-weight: 500;
-        color: white;
+        color: black;
         text-align: center;
       }
 
@@ -69,6 +64,7 @@
         width: 240px;
         height: 320px;
         background-color: black;
+        z-index: 2;
       }
 
       .swiper-slide {
@@ -115,28 +111,136 @@
           margin-top: 50px;
         }
 
-        #lucas {
+        .lucas {
           margin-left: 38px;
         }
 
-      
+        .rajule {
+          margin-left: 55px;
+        }
+
+      h1 {
+        color: black
+      }
+
+      .title {
+        margin-top: 10%;
+      }
+
+      button {
+          border-radius: 18px;
+          border: 1px solid black;
+          margin: 15px auto;
+          display: block;
+          padding: 15px;
+          background-color: white;
+          color: black;
+          font-weight: inherit;
+          cursor: pointer;
+          margin-bottom: 50px;
+        }
+
+      .btn-red:hover { 
+          background-color: red;
+          color: white; 
+      }
+
+      .btn-green:hover { 
+          background-color: green;
+          color: white; 
+      }
+
+      .overlay {
+        display: none;
+        background-color: rgba(0,0,0,0.3);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: left;
+        bottom: 0;
+        top: 0;
+      }
+
+      .modal {
+          border-radius: 15px;
+          padding: 30px;
+          position: relative;
+          margin: 0 auto;
+          max-width: 400px;
+          font-size: 1.0rem;
+          height: 125%;
+          background-color: white;
+          text-align: left;
+          top: 10%;
+          z-index: 3;
+        }
+
+      li {
+        font-weight: 300;
+        list-style: circle;
+      }
+
+      ul {
+        display: grid;
+        text-align: left;
+        margin-right: 40px;
+      }
+
+      .bio-title {
+        font-weight: 500;
+        text-align: left;
+      }
+
+      .bio-paragraph {
+        font-weight: 300;
+        text-align: left;
+      }
+
+      .music-links {
+        text-align: left;
+      }
+
+      .open-modal-lucas {
+        z-index: 5;
+      }
 
     </style>
   </head>
 
   <body>
-    <!-- Swiper -->
+    
+      <!-- Swiper Content -->
+      <div class="swiper mySwiper">
+      <!-- Modal Container 
+      <div class="title">
+        <button class="open-modal btn-green">Open</button>
+      </div>-->
+      
+      <div class="overlay">
+        <div class="modal">
+          <h1>Rajule</h1>
+          <p class="bio-title">Bio:</p>
+            <p class="bio-paragraph">Born in the city of Philadelphia. He was prone to become a rapper.</p>
+          <p class="music-links">Music Links:
+            <ul>
+              <li>
+                <a href="#">YouTube</a>
+              </li>
+              <li>
+                <a href="#">Apple Music</a>
+              </li>
+            </ul>
+          </p>
+          <button class="closes-modal btn-red">Close</button>
+        </div>
+      </div>
 
-    <div class="swiper mySwiper">
-      <center><a href="home.html">
+      <center><a>
         <img src="orangecap_icon.jpg" class="capIcon" width="15%">
       </a></center>
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-            <a>
-                <img src="rajule.png" width="70%">
-            </a>
-        </div>
         <div class="swiper-slide">
             <img src="brandon.png" width="70%">
         </div>
@@ -150,9 +254,9 @@
             <img src="leo.png" width="80%">
         </div>
         <div class="swiper-slide">
-            <a href="https://youtube.com/">
-                <img src="lucas.png" id="lucas" width="70%">
-            </a>
+          <a>
+            <img src="lucas.png" class="lucas" width="70%">
+          </a>
         </div>
         <div class="swiper-slide">
             <a href="https://google.com/">
@@ -164,6 +268,11 @@
         </div>
         <div class="swiper-slide">
             <img src="jamie.png" id="jamie" width="70%">
+        </div>
+        <div class="swiper-slide">
+          <a class="open-modal">
+              <img class="rajule" src="rajule.png" width="70%">
+          </a>
         </div>
         <div class="swiper-slide">
             <img src="goff.png" width="70%">
@@ -186,6 +295,7 @@
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./app.js"></script>
+    <script src="script.js"></script>
 
     <!-- Initialize Swiper -->
     <script>
@@ -196,7 +306,6 @@
         keyboard: true,
         initialSlide: 5,
       });
-
       
     </script>
   </body>
