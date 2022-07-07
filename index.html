@@ -295,7 +295,6 @@
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./app.js"></script>
-    <script src="script.js"></script>
 
     <!-- Initialize Swiper -->
     <script>
@@ -306,6 +305,18 @@
         keyboard: true,
         initialSlide: 5,
       });
+
+      const openBtn = document.querySelector(".open-modal");
+      const closesBtn = document.querySelector(".closes-modal");
+      const overlay = document.querySelector(".overlay")
+
+      openBtn.addEventListener("click", () => {
+        overlay.style.display = "block";
+      });
+
+      closesBtn.addEventListener("click", () => {
+        overlay.style.display = "none";
+      })
       
     </script>
   </body>
